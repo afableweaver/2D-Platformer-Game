@@ -9,7 +9,7 @@ AnimatorController:
   m_Name: Player
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: Speed_Para
+  - m_Name: Speed
     m_Type: 1
     m_DefaultFloat: 1
     m_DefaultInt: 0
@@ -185,8 +185,8 @@ AnimatorStateTransition:
     m_ConditionEvent: WithGun
     m_EventTreshold: 0
   - m_ConditionMode: 4
-    m_ConditionEvent: Speed_Para
-    m_EventTreshold: 2
+    m_ConditionEvent: Speed
+    m_EventTreshold: 0.5
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102884847768514858}
   m_Solo: 0
@@ -213,8 +213,8 @@ AnimatorStateTransition:
     m_ConditionEvent: WithGun
     m_EventTreshold: 0
   - m_ConditionMode: 3
-    m_ConditionEvent: Speed_Para
-    m_EventTreshold: 2
+    m_ConditionEvent: Speed
+    m_EventTreshold: 0.5
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102761202745876028}
   m_Solo: 0
@@ -241,8 +241,8 @@ AnimatorStateTransition:
     m_ConditionEvent: WithGun
     m_EventTreshold: 0
   - m_ConditionMode: 4
-    m_ConditionEvent: Speed_Para
-    m_EventTreshold: 1
+    m_ConditionEvent: Speed
+    m_EventTreshold: 0.25
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102108617010112098}
   m_Solo: 0
@@ -391,8 +391,8 @@ AnimatorStateTransition:
     m_ConditionEvent: WithGun
     m_EventTreshold: 0
   - m_ConditionMode: 3
-    m_ConditionEvent: Speed_Para
-    m_EventTreshold: 2
+    m_ConditionEvent: Speed
+    m_EventTreshold: 0.5
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102713493595678382}
   m_Solo: 0
@@ -494,8 +494,8 @@ AnimatorStateTransition:
     m_ConditionEvent: WithGun
     m_EventTreshold: 0
   - m_ConditionMode: 4
-    m_ConditionEvent: Speed_Para
-    m_EventTreshold: 1
+    m_ConditionEvent: Speed
+    m_EventTreshold: 0.25
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102344432882375788}
   m_Solo: 0
@@ -522,8 +522,8 @@ AnimatorStateTransition:
     m_ConditionEvent: WithGun
     m_EventTreshold: 0
   - m_ConditionMode: 4
-    m_ConditionEvent: Speed_Para
-    m_EventTreshold: 2
+    m_ConditionEvent: Speed
+    m_EventTreshold: 0.5
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102884847768514858}
   m_Solo: 0
@@ -594,8 +594,8 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 4
-    m_ConditionEvent: Speed_Para
-    m_EventTreshold: 1
+    m_ConditionEvent: Speed
+    m_EventTreshold: 0.25
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102108617010112098}
   m_Solo: 0
@@ -692,7 +692,13 @@ AnimatorStateTransition:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: WithGun
+    m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: Speed
+    m_EventTreshold: 0.25
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102634523119535798}
   m_Solo: 0
@@ -910,8 +916,8 @@ AnimatorStateTransition:
     m_ConditionEvent: WithGun
     m_EventTreshold: 0
   - m_ConditionMode: 3
-    m_ConditionEvent: Speed_Para
-    m_EventTreshold: 1
+    m_ConditionEvent: Speed
+    m_EventTreshold: 0.25
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102884847768514858}
   m_Solo: 0
@@ -935,8 +941,8 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: Speed_Para
-    m_EventTreshold: 1
+    m_ConditionEvent: Speed
+    m_EventTreshold: 0.25
   - m_ConditionMode: 1
     m_ConditionEvent: WithGun
     m_EventTreshold: 0
@@ -966,8 +972,8 @@ AnimatorStateTransition:
     m_ConditionEvent: WithGun
     m_EventTreshold: 0
   - m_ConditionMode: 3
-    m_ConditionEvent: Speed_Para
-    m_EventTreshold: 2
+    m_ConditionEvent: Speed
+    m_EventTreshold: 0.5
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102761202745876028}
   m_Solo: 0
@@ -994,8 +1000,8 @@ AnimatorStateTransition:
     m_ConditionEvent: WithGun
     m_EventTreshold: 0
   - m_ConditionMode: 4
-    m_ConditionEvent: Speed_Para
-    m_EventTreshold: 2
+    m_ConditionEvent: Speed
+    m_EventTreshold: 0.5
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102634523119535798}
   m_Solo: 0
@@ -1094,8 +1100,8 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 4
-    m_ConditionEvent: Speed_Para
-    m_EventTreshold: 2
+    m_ConditionEvent: Speed
+    m_EventTreshold: 0.5
   - m_ConditionMode: 1
     m_ConditionEvent: WithGun
     m_EventTreshold: 0
@@ -1122,8 +1128,8 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: Speed_Para
-    m_EventTreshold: 2
+    m_ConditionEvent: Speed
+    m_EventTreshold: 0.5
   - m_ConditionMode: 1
     m_ConditionEvent: WithGun
     m_EventTreshold: 0.5
@@ -1203,8 +1209,8 @@ AnimatorStateTransition:
     m_ConditionEvent: WithGun
     m_EventTreshold: 0
   - m_ConditionMode: 3
-    m_ConditionEvent: Speed_Para
-    m_EventTreshold: 1
+    m_ConditionEvent: Speed
+    m_EventTreshold: 0.25
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102884847768514858}
   m_Solo: 0
@@ -1248,7 +1254,13 @@ AnimatorStateTransition:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: WithGun
+    m_EventTreshold: 0
+  - m_ConditionMode: 4
+    m_ConditionEvent: Speed
+    m_EventTreshold: 0.25
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102344432882375788}
   m_Solo: 0
