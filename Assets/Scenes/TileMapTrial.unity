@@ -798,6 +798,7 @@ GameObject:
   - component: {fileID: 1709987592}
   - component: {fileID: 1709987591}
   - component: {fileID: 1709987590}
+  - component: {fileID: 1709987593}
   m_Layer: 0
   m_Name: ExitPortal
   m_TagString: Untagged
@@ -832,7 +833,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 1.9323766}
+  m_Offset: {x: 0, y: 1.8740965}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -843,7 +844,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1726072, y: 2.560018}
+  m_Size: {x: 1.1726072, y: 3.2922022}
   m_EdgeRadius: 0
 --- !u!212 &1709987591
 SpriteRenderer:
@@ -912,6 +913,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1709987593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1709987588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8c3c393e9f3494dac136eee411b93c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1884108622
 GameObject:
   m_ObjectHideFlags: 0
