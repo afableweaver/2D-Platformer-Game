@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
@@ -9,11 +10,13 @@ public class PlayerController : MonoBehaviour
     public float jump;          //player jump force value
     public float horizontal;    //player horizontal movement
     private float vertical;     //player vertical movement
+
     private Vector2 position;   //player position
 
     private Rigidbody2D rb2d;
     private BoxCollider2D boxcollider;
     public GroundCheck GroundStatus;
+    public ScoreController scoreController;
 
 
     private void Awake()
@@ -94,5 +97,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-  
+
+    public void PickUpKey()
+    {
+        scoreController.keyFound = true;
+        scoreController.refreshUI();
+    }
+
 }
