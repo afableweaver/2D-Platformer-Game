@@ -18,8 +18,7 @@ public class PlayerController : MonoBehaviour
     public GroundCheck GroundStatus;
     public ScoreController scoreController;
 
-
-    private void Awake()
+        private void Awake()
     {
         rb2d = gameObject.GetComponent<Rigidbody2D>();
         boxcollider = gameObject.GetComponent<BoxCollider2D>();
@@ -97,11 +96,16 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
     public void PickUpKey()
     {
         scoreController.keyFound = true;
         scoreController.refreshUI();
     }
 
+    public void KillPlayer()
+    {
+        //Debug.Log("Player Killed.");
+        animator.SetBool("deathBool", true);
+        //LevelController.ReloadScene();
+    }
 }

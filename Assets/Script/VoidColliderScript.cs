@@ -5,6 +5,9 @@ public class VoidColliderScript : MonoBehaviour
 {
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        SceneManager.LoadScene("TileMapTrial");
+        if (collision.gameObject.GetComponent<PlayerController>() != null)
+        {
+            SceneManager.LoadScene("TileMapTrial");
+        }
     }
 }
