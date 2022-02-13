@@ -3,23 +3,16 @@ using UnityEngine.SceneManagement;
 
 public class LevelController : MonoBehaviour
 {
-    private UnityEngine.SceneManagement.Scene currentLevel;
-    // Start is called before the first frame update
-    void Start()
+    public int currLevelCount;
+
+    public void ReloadLevel()
     {
-        
+        SceneManager.LoadScene((SceneManager.GetActiveScene()).name);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void NextLevel()
     {
-        currentLevel = SceneManager.GetActiveScene();
-        Debug.Log(currentLevel);
-    }
-
-    internal static void ReloadScene()
-    {
-        
-        //SceneManager.LoadScene(CurrentLevel);
+        currLevelCount=(SceneManager.GetActiveScene()).buildIndex;
+        SceneManager.LoadScene(currLevelCount+1);
     }
 }

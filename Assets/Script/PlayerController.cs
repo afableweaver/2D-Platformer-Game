@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -9,19 +11,24 @@ public class PlayerController : MonoBehaviour
     public bool crouch;         //crouch bool
     public float jump;          //player jump force value
     public float horizontal;    //player horizontal movement
-    private float vertical;     //player vertical movement
+    private float vertical;     //player vertical 
 
     private Vector2 position;   //player position
 
     private Rigidbody2D rb2d;
     private BoxCollider2D boxcollider;
     public GroundCheck GroundStatus;
-    public ScoreController scoreController;
+    private ScoreController scoreController;
+    private HealthBar healthBar;
+    public LevelController levelController;
 
-        private void Awake()
+    private void Awake()
     {
         rb2d = gameObject.GetComponent<Rigidbody2D>();
         boxcollider = gameObject.GetComponent<BoxCollider2D>();
+        healthBar = gameObject.GetComponent<HealthBar>();
+        //levelController = gameObject.GetComponent<LevelController>();
+        ///scoreController = GameObject.ScoreController
     }
     private void Update()
     {
@@ -31,6 +38,10 @@ public class PlayerController : MonoBehaviour
         vertical = Input.GetAxisRaw("Jump");
 
         PMAnimation(horizontal, vertical, crouch);
+        if (healthBar.health <=0)
+        {
+            KillPlayer();
+        }
     }
 
     private void FixedUpdate()
@@ -46,10 +57,6 @@ public class PlayerController : MonoBehaviour
         if (vertical > 0 && GroundStatus.isGrounded == true)
         {
             rb2d.AddForce(new Vector2(0f, jump), ForceMode2D.Impulse);
-        }
-        else
-        {
-
         }
     }
 
@@ -98,14 +105,28 @@ public class PlayerController : MonoBehaviour
 
     public void PickUpKey()
     {
-        scoreController.keyFound = true;
-        scoreController.refreshUI();
+        scoreController.RefreshUI();
+        scoreController.keyScore += 1;
     }
-
+    public void HurtPlayer()
+    {
+        animator.SetTrigger("Hurt_Trigger");
+        healthBar.PlayerHurts();
+    }
     public void KillPlayer()
     {
         //Debug.Log("Player Killed.");
         animator.SetBool("deathBool", true);
-        //LevelController.ReloadScene();
+        StartCoroutine(DeathPause());
     }
+    private IEnumerator DeathPause()
+    {
+        yield return new WaitForSeconds(1f);
+        //Debug.Log("In coroutine");
+        levelController.ReloadLevel();
+    }
+    //private IEnumerator HurtPause() removed for now.
+    //{
+    //    yield return new WaitForSeconds(1f);
+    //}
 }

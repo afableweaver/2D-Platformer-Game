@@ -4,30 +4,31 @@ using System;
 
 public class ScoreController : MonoBehaviour
 {
+    public int[] levelPassCondition;
+    public int keyScore;
     private TextMeshProUGUI displayText;
-    public bool keyFound = false;
+    private LevelController levelController;
+    public bool levelPass = false;
     // private int gameScore = 0;
     // public int increment;
 
     private void Awake()
     {
-        displayText = GetComponent<TextMeshProUGUI>();   
+        displayText = GetComponent<TextMeshProUGUI>();
+
+        //entering Level pass condition - number of keys
+        //levelPassCondition[0] = 1;
+        //levelPassCondition[1] = 1;
     }
 
     private void Start()
     {
-        refreshUI();    
+        RefreshUI(); 
     }
 
-    /*public void IncreaseScore (int increment)
+    public void RefreshUI()
     {
-        gameScore += increment;
-        refreshUI();
-    } */
-
-    public void refreshUI()
-    {
-        if (keyFound == true)
+        if (levelPass == true)
         {
             displayText.text = "Key found. Get to the Portal.";
         }
@@ -36,4 +37,12 @@ public class ScoreController : MonoBehaviour
             displayText.text = "Find the Key.";
         }
     } 
+
+    public void CheckLevelPass()
+    {
+        if (keyScore==levelPassCondition[levelController.currLevelCount])
+        {
+            levelPass = true;
+        }
+    }
 }

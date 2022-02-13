@@ -42,7 +42,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.91372555, g: 0.73333335, b: 0.7725491, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -96,6 +96,8 @@ GameObject:
   - component: {fileID: 41444773}
   - component: {fileID: 41444774}
   - component: {fileID: 41444776}
+  - component: {fileID: 1763195150}
+  - component: {fileID: 1763195151}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -251,7 +253,44 @@ MonoBehaviour:
   jump: 55
   horizontal: 0
   GroundStatus: {fileID: 485279703}
-  scoreController: {fileID: 0}
+  levelController: {fileID: 1763195151}
+--- !u!114 &1763195150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6579240746400041051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b60cc4b6e5d3ef44915c32d9c626287, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3
+  numofhearts: 3
+  hearts:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  fullHeart: {fileID: 21300010, guid: fc49794cc535bef4f969645c4eb97b80, type: 3}
+  emptyHeart: {fileID: 21300000, guid: fc49794cc535bef4f969645c4eb97b80, type: 3}
+  hbAnimator:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &1763195151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6579240746400041051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c912a6561c1018542b9d55d8751af43e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currLevelCount: 0
 --- !u!1 &6795610582666121189
 GameObject:
   m_ObjectHideFlags: 0

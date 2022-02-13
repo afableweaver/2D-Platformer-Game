@@ -9,54 +9,54 @@ AnimatorController:
   m_Name: Player
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: Speed
-    m_Type: 1
-    m_DefaultFloat: 1
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
-  - m_Name: WithGun
-    m_Type: 4
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
-  - m_Name: Jump
-    m_Type: 4
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
-  - m_Name: Crouching
-    m_Type: 4
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 1
-    m_Controller: {fileID: 9100000}
-  - m_Name: StaffAttack_Trigger
-    m_Type: 9
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
-  - m_Name: Hurt_Trigger
-    m_Type: 9
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
-  - m_Name: Health
-    m_Type: 3
-    m_DefaultFloat: 0
-    m_DefaultInt: 100
-    m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
   - m_Name: deathBool
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
+  - m_Name: Speed
+    m_Type: 1
+    m_DefaultFloat: 1
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: WithGun
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: Jump
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: Crouching
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 1
+    m_Controller: {fileID: 0}
+  - m_Name: StaffAttack_Trigger
+    m_Type: 9
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: Hurt_Trigger
+    m_Type: 9
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: Health
+    m_Type: 3
+    m_DefaultFloat: 0
+    m_DefaultInt: 100
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -107,6 +107,9 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 1
     m_ConditionEvent: WithGun
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: deathBool
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102108617010112098}
@@ -208,6 +211,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 4
     m_ConditionEvent: Speed
     m_EventTreshold: 0.5
+  - m_ConditionMode: 2
+    m_ConditionEvent: deathBool
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102884847768514858}
   m_Solo: 0
@@ -236,6 +242,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 3
     m_ConditionEvent: Speed
     m_EventTreshold: 0.5
+  - m_ConditionMode: 2
+    m_ConditionEvent: deathBool
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102761202745876028}
   m_Solo: 0
@@ -264,6 +273,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 4
     m_ConditionEvent: Speed
     m_EventTreshold: 0.25
+  - m_ConditionMode: 2
+    m_ConditionEvent: deathBool
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102108617010112098}
   m_Solo: 0
@@ -311,6 +323,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: WithGun
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: deathBool
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102344432882375788}
   m_Solo: 0
@@ -335,6 +350,9 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 1
     m_ConditionEvent: WithGun
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: deathBool
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102634523119535798}
@@ -361,6 +379,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: StaffAttack_Trigger
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: deathBool
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102547772476655410}
   m_Solo: 0
@@ -385,6 +406,9 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 2
     m_ConditionEvent: WithGun
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: deathBool
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102344432882375788}
@@ -414,6 +438,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 3
     m_ConditionEvent: Speed
     m_EventTreshold: 0.5
+  - m_ConditionMode: 2
+    m_ConditionEvent: deathBool
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102713493595678382}
   m_Solo: 0
@@ -438,6 +465,9 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 1
     m_ConditionEvent: Crouching
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: deathBool
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102483223581169456}
@@ -464,6 +494,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: Hurt_Trigger
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: deathBool
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102791628088351290}
   m_Solo: 0
@@ -488,6 +521,9 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 1
     m_ConditionEvent: WithGun
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: deathBool
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102108617010112098}
@@ -517,6 +553,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 4
     m_ConditionEvent: Speed
     m_EventTreshold: 0.25
+  - m_ConditionMode: 2
+    m_ConditionEvent: deathBool
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102344432882375788}
   m_Solo: 0
@@ -545,6 +584,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 4
     m_ConditionEvent: Speed
     m_EventTreshold: 0.5
+  - m_ConditionMode: 2
+    m_ConditionEvent: deathBool
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102884847768514858}
   m_Solo: 0
@@ -617,6 +659,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 4
     m_ConditionEvent: Speed
     m_EventTreshold: 0.25
+  - m_ConditionMode: 2
+    m_ConditionEvent: deathBool
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102108617010112098}
   m_Solo: 0
@@ -638,7 +683,10 @@ AnimatorStateTransition:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: deathBool
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102344432882375788}
   m_Solo: 0
@@ -667,6 +715,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: Jump
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: deathBool
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102450356676777710}
   m_Solo: 0
@@ -691,6 +742,9 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 1
     m_ConditionEvent: WithGun
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: deathBool
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102311112555609622}
@@ -792,6 +846,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: WithGun
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: deathBool
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102108617010112098}
   m_Solo: 0
@@ -817,6 +874,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: Crouching
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: deathBool
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102344432882375788}
   m_Solo: 0
@@ -841,6 +901,9 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 2
     m_ConditionEvent: WithGun
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: deathBool
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102884847768514858}
@@ -892,6 +955,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 3
     m_ConditionEvent: Speed
     m_EventTreshold: 0.25
+  - m_ConditionMode: 2
+    m_ConditionEvent: deathBool
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102884847768514858}
   m_Solo: 0
@@ -919,6 +985,9 @@ AnimatorStateTransition:
     m_EventTreshold: 0.25
   - m_ConditionMode: 1
     m_ConditionEvent: WithGun
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: deathBool
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102634523119535798}
@@ -1026,6 +1095,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: Jump
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: deathBool
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102782485516456324}
   m_Solo: 0
@@ -1076,6 +1148,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: WithGun
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: deathBool
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102344432882375788}
   m_Solo: 0
@@ -1103,6 +1178,9 @@ AnimatorStateTransition:
     m_EventTreshold: 0.5
   - m_ConditionMode: 1
     m_ConditionEvent: WithGun
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: deathBool
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102634523119535798}
@@ -1132,6 +1210,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: WithGun
     m_EventTreshold: 0.5
+  - m_ConditionMode: 2
+    m_ConditionEvent: deathBool
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102713493595678382}
   m_Solo: 0
@@ -1157,6 +1238,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: WithGun
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: deathBool
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102483223581169456}
   m_Solo: 0
@@ -1181,6 +1265,9 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 1
     m_ConditionEvent: WithGun
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: deathBool
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102108617010112098}
@@ -1210,6 +1297,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 3
     m_ConditionEvent: Speed
     m_EventTreshold: 0.25
+  - m_ConditionMode: 2
+    m_ConditionEvent: deathBool
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102884847768514858}
   m_Solo: 0
@@ -1231,7 +1321,10 @@ AnimatorStateTransition:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: deathBool
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102344432882375788}
   m_Solo: 0

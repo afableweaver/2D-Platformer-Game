@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ChomperPatrol : MonoBehaviour
 {
@@ -28,7 +27,7 @@ public class ChomperPatrol : MonoBehaviour
         {
             RaycastHit2D wallInfo = Physics2D.Raycast(GroundDetection.position, Vector2.right, 1f); //wallinfo ray
             Debug.DrawRay(GroundDetection.position, Vector2.right, Color.green);
-            if (wallInfo.collider == true)
+            if (wallInfo.collider == true && wallInfo.collider.GetComponent<PlayerController>() == null)
             {
                 //Debug.Log("WallRay is right");
                 FlipEnemy();
@@ -38,7 +37,7 @@ public class ChomperPatrol : MonoBehaviour
         {
             RaycastHit2D wallInfo = Physics2D.Raycast(GroundDetection.position, Vector2.left, 1f); //wallinfo ray
             Debug.DrawRay(GroundDetection.position, Vector2.left, Color.green);
-            if (wallInfo.collider == true)
+            if (wallInfo.collider == true && wallInfo.collider.GetComponent<PlayerController>() == null)
             {
                 //Debug.Log("WallRay is left");
                 FlipEnemy();
