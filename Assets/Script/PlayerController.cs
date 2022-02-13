@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb2d;
     private BoxCollider2D boxcollider;
     public GroundCheck GroundStatus;
-    private ScoreController scoreController;
+    public ScoreController scoreController;
     private HealthBar healthBar;
     public LevelController levelController;
 
@@ -28,7 +28,6 @@ public class PlayerController : MonoBehaviour
         boxcollider = gameObject.GetComponent<BoxCollider2D>();
         healthBar = gameObject.GetComponent<HealthBar>();
         //levelController = gameObject.GetComponent<LevelController>();
-        ///scoreController = GameObject.ScoreController
     }
     private void Update()
     {
@@ -105,8 +104,8 @@ public class PlayerController : MonoBehaviour
 
     public void PickUpKey()
     {
+        scoreController.levelPass = true;
         scoreController.RefreshUI();
-        scoreController.keyScore += 1;
     }
     public void HurtPlayer()
     {

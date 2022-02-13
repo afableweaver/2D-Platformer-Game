@@ -26,7 +26,7 @@ public class ChomperPatrol : MonoBehaviour
         if (movingRight == true)
         {
             RaycastHit2D wallInfo = Physics2D.Raycast(GroundDetection.position, Vector2.right, 1f); //wallinfo ray
-            Debug.DrawRay(GroundDetection.position, Vector2.right, Color.green);
+            //Debug.DrawRay(GroundDetection.position, Vector2.right, Color.green);
             if (wallInfo.collider == true && wallInfo.collider.GetComponent<PlayerController>() == null)
             {
                 //Debug.Log("WallRay is right");
@@ -36,7 +36,7 @@ public class ChomperPatrol : MonoBehaviour
         else
         {
             RaycastHit2D wallInfo = Physics2D.Raycast(GroundDetection.position, Vector2.left, 1f); //wallinfo ray
-            Debug.DrawRay(GroundDetection.position, Vector2.left, Color.green);
+            //Debug.DrawRay(GroundDetection.position, Vector2.left, Color.green);
             if (wallInfo.collider == true && wallInfo.collider.GetComponent<PlayerController>() == null)
             {
                 //Debug.Log("WallRay is left");
